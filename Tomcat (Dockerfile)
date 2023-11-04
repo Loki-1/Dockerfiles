@@ -22,4 +22,32 @@ Docker build -t tomcat .
 Docker run -td --name tomcat -p 8081:8080 tomcat
 docker exec -it tomcat bash
 ***  Now Docker container interface will open ***
+cd apache-tomcat-9.0.82
+cd conf
+vi tomcat-user.xml
+
+***ADD below lines to create users ***
+
+<role rolename="manager-gui"/>
+          <role rolename="admin-gui"/>
+           <role rolename="manager-script"/>
+<user username="lokesh" password="lokesh" roles="manager-gui,admin-gui,manager-script"/>
+  <user username="ratna" password="ratna" roles="manager-gui"/>
+
+*** Tomcat as a Service ***
+ln -s /opt/tomcat/apache-tomcat-9.0.82/bin/startup.sh /usr/bin/startTomcat
+ln -s /opt/tomcat/apache-tomcat-9.0.82/bin/shutdown.sh /usr/bin/stopTomcat
+ps -fax | grep tomcat
+yum install net-tools -y
+netstat -tunlap
+vi /opt/tomcat/apache-tomcat-9.0.65/webapps/manager/META-INF/context.xml
+
+***  Comment the below lines ***
+<!-- <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
+
+startTomcat
+stopTomcat
+
+
 
