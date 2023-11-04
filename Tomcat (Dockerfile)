@@ -1,0 +1,18 @@
+FROM centos
+WORKDIR /etc/yum.repos.d/
+RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
+RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
+RUN cd ../..
+RUN yum install wget -y
+RUN yum install unzip -y
+MAINTAINER lokesh.naagam@gmail.com
+RUN mkdir /opt/tomcat/
+WORKDIR /opt/tomcat
+RUN wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.82/bin/apache-tomcat-9.0.82.zip
+RUN unzip apache-tomcat-9.0.82.zip
+RUN cd /opt/tomcat/apache-tomcat-9.0.82/bin
+RUN yum -y install java
+RUN java -version
+RUN chmod u+x apache-tomcat-9.0.82/bin/*.sh
+CMD ["/opt/tomcat/apache-tomcat-9.0.82/bin/catalina.sh", "run"]
+ExPOSE 8081
