@@ -8,6 +8,6 @@ docker network create LAN --driver bridge
 docker inspect LAN
 #To run docker container
 docker run -td --name sonarqube --network LAN -p 8082:9000 sonarqube
-
+link/ URL : Publicip:8082
 
 New userid : Admin | Newpassword : lokesh
