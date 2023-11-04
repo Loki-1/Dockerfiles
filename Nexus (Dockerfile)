@@ -1,0 +1,19 @@
+#nexus image pulling from dockerhub
+docker pull sonatype/nexus3
+#To check docker images
+docker images
+#Creating bridge network
+docker network create LAN --driver bridge
+#To check network
+docker inspect LAN
+#To run docker container
+docker run -td --name nexus --network LAN -p 8083:8081 sonatype/nexus3
+#To get initial password 
+docker exec -it nexus bash
+cd nexus
+cd nexus3
+cat admin.password
+*** copy and use that password for initial login and then change password ***
+link/ URL : Publicip:8083
+
+New userid : admin | Newpassword : lokesh
