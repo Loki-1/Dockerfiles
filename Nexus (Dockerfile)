@@ -10,7 +10,7 @@ docker inspect LAN
 docker run -td --name nexus --network LAN -p 8083:8081 sonatype/nexus3
 #To get initial password 
 docker exec -it nexus bash
-cd nexus
+cd sonatype-work
 cd nexus3
 cat admin.password
 *** copy and use that password for initial login and then change password ***
