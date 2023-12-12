@@ -18,17 +18,17 @@ Here We have the instructions for dockerfiles to create devops tools containers
 
 **ENV:** Sets environment variables inside the container.
 
-EXPOSE: Informs Docker that the container listens on the specified network ports at runtime.
+**EXPOSE:** Informs Docker that the container listens on the specified network ports at runtime.
 
-VOLUME: Defines a volume for persistent data. This is optional and depends on your application's requirements.
+**VOLUME:** Defines a volume for persistent data. This is optional and depends on your application's requirements.
 
-CMD: Specifies the default command to run when the container starts.
+**CMD:** Specifies the default command to run when the container starts.
 
-LABEL: Adds metadata to the image. It is useful for maintaining information about the image and the author.
+**LABEL:** Adds metadata to the image. It is useful for maintaining information about the image and the author.
 
-HEALTHCHECK: Configures a health check for container health monitoring. This is optional and depends on your application.
+**HEALTHCHECK:** Configures a health check for container health monitoring. This is optional and depends on your application.
 
-USER: Sets the user for the container. This is optional and depends on your security and permission requirements.
+**USER:** Sets the user for the container. This is optional and depends on your security and permission requirements.
 
 
 
