@@ -7,6 +7,7 @@
 
 **Docker File Instructions**
 Here We have the instructions for dockerfiles to create devops tools containers
+
 FROM: Specifies the base image for your Docker image. Choose an official image from Docker Hub or use a custom image.
 
 WORKDIR: Sets the working directory inside the container where subsequent instructions will be executed.
