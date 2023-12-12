@@ -8,15 +8,15 @@
 **Docker File Instructions**
 Here We have the instructions for dockerfiles to create devops tools containers
 
-FROM: Specifies the base image for your Docker image. Choose an official image from Docker Hub or use a custom image.
+**FROM:** Specifies the base image for your Docker image. Choose an official image from Docker Hub or use a custom image.
 
-WORKDIR: Sets the working directory inside the container where subsequent instructions will be executed.
+**WORKDIR:** Sets the working directory inside the container where subsequent instructions will be executed.
 
-COPY: Copies the files from your local machine to the specified directory inside the container.
+**COPY:** Copies the files from your local machine to the specified directory inside the container.
 
-RUN: Executes commands in the container during the build process. Use it to install dependencies or perform other setup tasks.
+**RUN:** Executes commands in the container during the build process. Use it to install dependencies or perform other setup tasks.
 
-ENV: Sets environment variables inside the container.
+**ENV:** Sets environment variables inside the container.
 
 EXPOSE: Informs Docker that the container listens on the specified network ports at runtime.
 
