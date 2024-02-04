@@ -1,3 +1,4 @@
+#Basic Project Docker file
 FROM centos
 COPY target/javaproject.jar /opt/javaproject.jar
 WORKDIR /etc/yum.repos.d/
