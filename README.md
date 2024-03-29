@@ -28,7 +28,7 @@ Here We have the instructions for dockerfiles to create devops tools containers
 
 **HEALTHCHECK:** Configures a health check for container health monitoring. This is optional and depends on your application.
 
-**USER:** Sets the user for the container. This is optional and depends on your security and permission requirements.
+**USER:** Sets the user for the container. This is optional and depends on your security and permission requirements.  
 
 
 
