@@ -6,3 +6,4 @@ RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|
 RUN cd ../..
 WORKDIR /opt
 RUN yum install java-11-openjdk -y
+RUN yum install wget -y
