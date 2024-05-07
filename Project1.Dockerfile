@@ -7,3 +7,6 @@ RUN cd ../..
 WORKDIR /opt
 RUN yum install java-11-openjdk -y
 RUN yum install wget -y
+RUN yum install runc -y
+CMD ["java","-jar","javaproject.jar"]
+
